@@ -259,3 +259,9 @@ transition: 0ms !important;
 display: none;
 }
 }
+
+.align-center {
+display: flex;
+justify-content: center;
+align-items: center;
+}
