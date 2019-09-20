@@ -1,0 +1,66 @@
+<!-- // (c) IGOR KOWALCZYK 2019. All rights reserved. \\ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#383838"/>
+<title>Color Checker</title>
+<!-- FAVICON -->	
+<link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/49127376?s=460&v=4">
+<!-- /FAVICON -->
+<!-- STYLES -->
+<link rel="stylesheet" href="https://igorkowalczyk.github.io/color-picker/css/style.css">
+<!-- /STYLES -->
+<!-- BODY -->
+<body ondragstart="return false" ondrag="return false">
+<template id="template">
+<div id="" class="box" onclick="copyColor(this.id)">
+<p data-default></p>
+<p data-hex data-case hidden></p>
+<p data-rgb hidden></p>
+<p data-hsl hidden></p>
+</div>
+</template>
+<div class="fixed">
+<h1>Color <span class="tel">checker</span></h1>
+</div><main>
+<div id="colorContainer">
+<div id="box0" class="box" onclick="copyColor(this.id)" style="background-color: rgb(70, 10, 24);">
+<p data-default="">#460a18</p>
+<p data-hex="" data-case="" hidden="">#460a18</p>
+<p data-rgb="" hidden="">rgb(70, 10, 24)</p>
+<p data-hsl="" hidden="">hsl(346, 75%, 16%)</p>
+</div>
+<div id="box1" class="box" onclick="copyColor(this.id)" style="background-color: rgb(70, 10, 24);">
+<p data-default="">rgb(70,10,24)</p>
+<p data-hex="" data-case="" hidden="">#460a18</p>
+<p data-rgb="" hidden="">rgb(70,10,24)</p>
+<p data-hsl="" hidden="">hsl(346, 75%, 15%)</p>
+</div>
+<div id="box2" class="box" onclick="copyColor(this.id)" style="background-color: rgb(53, 8, 18);">
+<p data-default="">#350812</p>
+<p data-hex="" data-case="" hidden="">#350812</p>
+<p data-rgb="" hidden="">rgb(53, 8, 18)</p>
+<p data-hsl="" hidden="">hsl(347, 74%, 12%)</p>
+</div>
+<div id="box3" class="box" onclick="copyColor(this.id)" style="background-color: rgb(53, 8, 18);">
+<p data-default="">rgb(53,8,18)</p>
+<p data-hex="" data-case="" hidden="">#350812</p>
+<p data-rgb="" hidden="">rgb(53,8,18)</p>
+<p data-hsl="" hidden="">hsl(347, 73%, 11%)</p>
+</div>
+</div>
+<div id="inputContainer">
+<textarea id="userInput"></textarea>
+<button type="button" onclick="submit()">submit</button>
+</div>
+</main>
+<footer class="footer sticky-footer">
+<label for="default"><input type="radio" name="format" id="default" value="default">DEF</label>
+<label for="hex"><input type="radio" name="format" id="hex" value="hex">HEX</label>
+<label for="rgb"><input type="radio" name="format" id="rgb" value="rgb">RGB</label>
+<label for="hsl"><input type="radio" name="format" id="hsl" value="hsl">HSL</label>
+</footer>
+<script scr="https://igorkowalczyk.github.io/color-picker/lib/js/index.js"></script>
+<!-- /BODY -->
