@@ -1,93 +1,25 @@
 /* (c) IGOR KOWALCZYK 2019. All rights reserved. */
 
-/* FONTS */
-
-/* INCONSOLATA */
-
-/* INCONSOLATA REGULAR */
-
-@font-face {
-font-family: 'Inconsolata-Regular';
-src:url(https://aurolia-css.github.io/lib/fonts/inconsolata/Inconsolata-Regular.otf);
-}
-
-/* /INCONSOLATA REGULAR */
-
-/* INCONSOLATA BOLD */
-
-@font-face {
-font-family: 'Inconsolata-Bold';
-src:url(https://aurolia-css.io/lib/fonts/inconsolata/Inconsolata-Bold.otf);
-}
-
-/* /INCONSOLATA BOLD */
-
-/* /INCONSOLATA */
-
-/* ROBOTO */
-
-/* ROBOTO BOlD */
-
-@font-face {
-font-family: 'Roboto-Bold';
-src:url(https://aurolia-css.io/lib/fonts/roboto/Roboto-Bold.otf);
-}
-
-/* /ROBOTO-BOlD */
-
-/* ROBOTO-CONDENSED */
-
-@font-face {
-font-family: 'Roboto-Condensed';
-src:url(https://aurolia-css.io/lib/fonts/roboto/Roboto-Condensed.otf);
-}
-
-/* /ROBOTO-CONDENSED */
-
-/* ROBOTO-MEDIUM */
-
-@font-face {
-font-family: 'Roboto-Medium';
-src:url(https://aurolia-css.io/lib/fonts/roboto/Roboto-Medium.otf);
-}
-
-/* /ROBOTO-MEDIUM */
-
-/* ROBOTO-REGULAR */
-
-@font-face {
-font-family: 'Roboto-Regular';
-src:url(https://aurolia-css.io/lib/fonts/roboto/Roboto-Regular.otf);
-}
-
-/* /ROBOTO-REGULAR */
-
-/* ROBOTO-LIGHT */
-
-@font-face {
-font-family: 'Roboto-Light';
-src:url(https://aurolia-css.io/lib/fonts/roboto/Roboto-Light.otf);
-}
-
-/* /ROBOTO-LIGHT */
-
-/* ROBOTO-LIGHT */
-
 @font-face {
 font-family: 'Roboto-Thin';
 src:url(https://aurolia-css.github.io/lib/fonts/roboto/Roboto-Thin.otf);
 }
 
-/* /ROBOTO-LIGHT */
-
-/* /ROBOTO */
-
-/* /FONTS */
-
 body {
 margin: 0;
+-webkit-animation: fadeIn 1s ease-in;
+animation: fadeIn 1s ease-in;
 background: hsl(235, 24%, 9%);
 font-family: 'Roboto-Thin';
+}
+
+@-webkit-keyframes fadeIn {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
 }
 
 * {
