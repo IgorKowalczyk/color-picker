@@ -186,6 +186,10 @@ resize: vertical;
 transition: 0ms !important;
 }
 
+::-webkit-resizer {
+background: #1d1d26 !important;
+}
+
 @media only screen and (max-width: 288px) {
 .tel {
 display: none;
