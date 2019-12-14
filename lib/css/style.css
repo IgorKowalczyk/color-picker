@@ -25,6 +25,8 @@ opacity: 1;
 * {
 outline: none;
 transition: 500ms all;
+scrollbar-color: #fff transparent;
+scrollbar-width: thin;
 }
 
 h1 {
