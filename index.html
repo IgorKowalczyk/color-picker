@@ -1,19 +1,21 @@
-<!-- // (c) IGOR KOWALCZYK 2019. All rights reserved. \\ -->
+<!-- // (c) IGOR KOWALCZYK. All rights reserved. \\ -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#383838"/>
-<title>Color Checker</title>
+<title>Color Picker</title>
 <!-- FAVICON -->	
 <link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/49127376?s=460&v=4">
 <!-- /FAVICON -->
 <!-- STYLES -->
 <link rel="stylesheet" href="https://igorkowalczyk.github.io/color-picker/lib/css/style.css">
 <!-- /STYLES -->
+</head>
 <!-- BODY -->
 <body ondragstart="return false" ondrag="return false">
+<script tyle="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
 <template id="template">
 <div id="" class="box" onclick="copyColor(this.id)">
 <p data-default></p>
@@ -23,7 +25,7 @@
 </div>
 </template>
 <div class="fixed">
-<h1>Color <span class="tel">checker</span></h1>
+<h1>Color <span class="tel">picker</span></h1>
 </div><main>
 <div id="colorContainer">
 <div id="box0" class="box" onclick="copyColor(this.id)" style="background-color: rgb(70, 10, 24);">
@@ -63,5 +65,7 @@
 <label for="rgb"><input type="radio" name="format" id="rgb" value="rgb">RGB</label>
 <label for="hsl"><input type="radio" name="format" id="hsl" value="hsl">HSL</label>
 </footer>
-<script src="https://igorkowalczyk.github.io/color-picker/lib/js/index.js"></script>
 <!-- /BODY -->
+<script src="https://igorkowalczyk.github.io/color-picker/lib/js/index.js"></script>
+</body>
+</html>
