@@ -11,6 +11,7 @@ margin: 0;
 animation: fadeIn 1s ease-in;
 background: hsl(235, 24%, 9%);
 font-family: 'Roboto-Thin';
+overflow-x: hidden;
 }
 
 @-webkit-keyframes fadeIn {
@@ -24,14 +25,14 @@ opacity: 1;
 
 * {
 outline: none;
-transition: 500ms all;
 scrollbar-color: #fff transparent;
 scrollbar-width: thin;
 }
 
 h1 {
 margin: 0;
-padding: 20px 40px;
+user-select: none;
+padding: 20px;
 color: hsl(235, 24%, 56%);
 background-color: hsl(235, 24%, 8%);
 width: 100%;
@@ -53,6 +54,7 @@ margin: 50px 10%;
 
 footer {
 margin-top: 50px;
+user-select: none;
 }
 
 .sticky-footer {
@@ -91,12 +93,15 @@ input[type="radio"]:checked {
 border: 8px solid hsl(235, 24%, 56%);
 }
 
-#colorContainer,
-#inputContainer {
+#colorContainer, #inputContainer {
 display: grid;
 grid-auto-rows: minmax(150px, auto);
 grid-gap: 40px;
 margin-top: 100px;
+}
+
+#inputContainer {
+grid-auto-rows: minmax(0px, auto);
 }
 
 .box {
@@ -120,13 +125,11 @@ top: 87px;
 #userInput {
 font-size: 18px;
 line-height: 1.6;
-padding: 20px;
 border-radius: 5px;
 margin-top: 50px;
 }
 
-#userInput,
-button {
+#userInput, button {
 color: #ccc;
 background-color: hsl(235, 14%, 13%);
 border: solid 1px hsl(235, 14%, 15%);
@@ -137,6 +140,7 @@ margin-top: 20px;
 height: 50px;
 font-size: 20px;
 border-radius: 5px;
+transition: 500ms all;
 }
 
 button:hover {
@@ -157,7 +161,6 @@ color: hsla(217, 89%, 66%, 1);
 from {
 transform: scale(1);
 }
-
 to {
 transform: scale(1.2);
 }
@@ -167,20 +170,17 @@ transform: scale(1.2);
 #colorContainer {
 grid-template-columns: repeat(4, 0.25fr);
 }
-
-#inputContainer {
-grid-template-columns: repeat(1, 0.5fr);
-}
 }
 
 @media screen and (min-width: 1200px) {
 #colorContainer {
 grid-template-columns: repeat(5, 0.2fr);
 }
-
-#inputContainer {
-grid-template-columns: repeat(1, 0.38fr);
 }
+
+.p {
+user-select: none;
+color: #fff;
 }
 
 textarea {

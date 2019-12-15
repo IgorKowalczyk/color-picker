@@ -16,6 +16,11 @@
 <!-- BODY -->
 <body ondragstart="return false" ondrag="return false">
 <script tyle="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
+<div class="fixed">
+<h1>Color <span class="tel">picker</span></h1>
+</div>
+<div data-scroll="1">
+<div data-scroll-content="1">
 <template id="template">
 <div id="" class="box" onclick="copyColor(this.id)">
 <p data-default></p>
@@ -23,10 +28,7 @@
 <p data-rgb hidden></p>
 <p data-hsl hidden></p>
 </div>
-</template>
-<div class="fixed">
-<h1>Color <span class="tel">picker</span></h1>
-</div><main>
+</template><main>
 <div id="colorContainer">
 <div id="box0" class="box" onclick="copyColor(this.id)" style="background-color: rgb(70, 10, 24);">
 <p data-default="">#460a18</p>
@@ -56,8 +58,8 @@
 <div id="align-center">
 <div id="inputContainer">
 <textarea id="userInput"></textarea>
-<button type="button" onclick="submit()">submit</button>
-</div><p style="color: #fff">Note: Write every color in a new line.</p></div>
+<button type="button" onclick="submit()">Submit</button>
+<p class="p">Note: Write every color in a new line.</p></div></div>
 </main>
 <footer class="footer sticky-footer">
 <label for="default"><input type="radio" name="format" id="default" value="default">DEF</label>
