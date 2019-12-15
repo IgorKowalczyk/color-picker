@@ -157,6 +157,10 @@ animation: pulse 200ms ease-in-out 2 alternate;
 color: hsla(217, 89%, 66%, 1);
 }
 
+[data-default] {
+transition: 500ms all;
+}
+
 @keyframes pulse {
 from {
 transform: scale(1);
