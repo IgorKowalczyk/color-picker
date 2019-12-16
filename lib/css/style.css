@@ -157,7 +157,7 @@ animation: pulse 200ms ease-in-out 2 alternate;
 color: hsla(217, 89%, 66%, 1);
 }
 
-[data-default] {
+p {
 transition: 500ms all;
 }
 
