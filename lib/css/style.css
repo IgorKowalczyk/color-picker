@@ -95,7 +95,7 @@ top: 4px;
 }
 
 input[type="radio"]:checked {
-border: 8px solid #999;
+border: 8px solid #00a3a3;
 }
 
 #colorContainer {
@@ -422,10 +422,6 @@ max-height: none;
 .nav .menu-icon {
 display: none;
 }
-}
-
-[hidden] {
-display: none;
 }
 
 ul, li {
