@@ -2,16 +2,20 @@
 
 @font-face {
 font-family: 'Roboto-Thin';
-src:url(https://igorkowalczyk.github.io/color-picker/lib/fonts/roboto/Roboto-Thin.otf);
+src: url(https://igorkowalczyk.github.io/color-picker/lib/fonts/roboto/Roboto-Thin.otf);
 }
 
 body {
 margin: 0;
 -webkit-animation: fadeIn 1s ease-in;
 animation: fadeIn 1s ease-in;
-background: hsl(235, 24%, 9%);
+background: #fff;
 font-family: 'Roboto-Thin';
 overflow-x: hidden;
+}
+
+html {
+scroll-behavior: smooth;
 }
 
 @-webkit-keyframes fadeIn {
@@ -25,7 +29,7 @@ opacity: 1;
 
 * {
 outline: none;
-scrollbar-color: #fff transparent;
+scrollbar-color: #353535 transparent;
 scrollbar-width: thin;
 }
 
@@ -33,8 +37,8 @@ h1 {
 margin: 0;
 user-select: none;
 padding: 20px;
-color: hsl(235, 24%, 56%);
-background-color: hsl(235, 24%, 8%);
+color: #000;
+background-color: #fff;
 width: 100%;
 text-align: center;
 box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.2);
@@ -54,6 +58,7 @@ margin: 50px 10%;
 
 footer {
 margin-top: 50px;
+box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
 user-select: none;
 }
 
@@ -63,7 +68,7 @@ left: 0;
 bottom: 0;
 right: 0;
 padding: 0 50px 5px 50px;
-background: hsl(235, 24%, 9%);
+background: #fff;
 }
 
 [hidden] {
@@ -71,7 +76,7 @@ display: none !important;
 }
 
 label {
-color: #eee;
+color: #000;
 }
 
 input[type="radio"] {
@@ -90,10 +95,10 @@ top: 4px;
 }
 
 input[type="radio"]:checked {
-border: 8px solid hsl(235, 24%, 56%);
+border: 8px solid #999;
 }
 
-#colorContainer, #inputContainer {
+#colorContainer {
 display: grid;
 grid-auto-rows: minmax(150px, auto);
 grid-gap: 40px;
@@ -102,6 +107,9 @@ margin-top: 100px;
 
 #inputContainer {
 grid-auto-rows: minmax(0px, auto);
+display: grid;
+grid-gap: 40px;
+margin-top: 50px;
 }
 
 .box {
@@ -130,13 +138,13 @@ margin-top: 50px;
 }
 
 #userInput, button {
-color: #ccc;
-background-color: hsl(235, 14%, 13%);
+color: #000;
+background-color: #fff;
+font-family: 'Roboto-Thin';
 border: solid 1px hsl(235, 14%, 15%);
 }
 
 button {
-margin-top: 20px;
 height: 50px;
 font-size: 20px;
 border-radius: 5px;
@@ -144,9 +152,7 @@ transition: 500ms all;
 }
 
 button:hover {
-color: hsl(235, 24%, 56%);
-background: hsl(235, 18%, 10%);
-border-color: hsl(235, 24%, 56%);
+background: #f4f4f4;
 }
 
 .pulse {
@@ -154,7 +160,7 @@ animation: pulse 200ms ease-in-out 2 alternate;
 }
 
 .pulse p {
-color: hsla(217, 89%, 66%, 1);
+color: #00a3a3;
 }
 
 p {
@@ -196,12 +202,6 @@ transition: 0ms !important;
 background: #1d1d26 !important;
 }
 
-@media only screen and (max-width: 288px) {
-.tel {
-display: none;
-}
-}
-
 .align-center {
 display: flex;
 justify-content: center;
@@ -221,14 +221,15 @@ border: 4px solid transparent;
 background-clip: padding-box;
 }
 
+
 .preloader {
 height: 100%;
 width: 100%;
-background: #27293f;
+background: #fff;
 position: fixed;
 left: 0;
 top: 0;
-z-index: 10000;
+z-index: 99999;
 perspective: 1600px;
 perspective-origin: 20% 50%;
 transition: 0.5s all;
@@ -238,8 +239,8 @@ opacity: 1;
 .spinner {
 width: 80px;
 height: 80px;
-border: 2px solid #27293f;
-border-top: 3px solid #fff;
+border: 2px solid #f3f3f3;
+border-top: 3px solid #00a3a3;
 border-radius: 100%;
 position: absolute;
 top: 0;
@@ -270,4 +271,207 @@ transform: rotateY(0deg);
 to {
 transform: rotateY(360deg);
 }
+}
+
+::-moz-selection {
+background: #333;
+color: #fff;
+text-shadow: none;
+}
+
+::-webkit-selection{
+background: #333;
+color: #fff;
+text-shadow: none;
+}
+
+::selection{
+background: #333;
+color: #fff;
+text-shadow: none;
+}
+
+
+.nav {
+background-color: #fff;
+position: fixed;
+width: 100%;
+top: 0;
+transition: 500ms all;
+z-index: 9999;
+}
+
+.nav:not(.nav-scroled):hover, .nav.nav-scrolled {
+box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.nav ul {
+margin: 0;
+padding: 0;
+list-style: none;
+overflow: hidden;
+background-color: #fff;
+}
+
+.nav li a {
+display: block;
+font-size: 20px;
+padding: 20px 20px;
+text-decoration: none;
+transition: 500ms all;
+}
+
+.nav li a:hover, .nav .menu-btn:hover {
+background-color: #f4f4f4;
+}
+
+.nav .logo {
+display: block;
+float: left;
+line-height: 40px;
+font-size: 20px;
+padding: 10px 20px;
+text-decoration: none;
+}
+
+.nav .menu {
+clear: both;
+max-height: 0;
+transition: max-height .2s ease-in-out;
+}
+
+.nav .menu-icon {
+cursor: pointer;
+display: inline-block;
+float: right;
+padding: 28px 20px;
+position: relative;
+user-select: none;
+}
+
+.nav .menu-icon .navicon {
+background: #333;
+display: block;
+height: 2px;
+position: relative;
+transition: background .2s ease-out;
+width: 18px;
+}
+
+.nav .menu-icon .navicon:before, .nav .menu-icon .navicon:after {
+background: #333;
+content: '';
+display: block;
+height: 100%;
+position: absolute;
+transition: all .2s ease-out;
+width: 100%;
+}
+
+.nav .menu-icon .navicon:before {
+top: 5px;
+}
+
+.nav .menu-icon .navicon:after {
+top: -5px;
+}
+
+.nav .menu-btn {
+display: none;
+}
+
+.nav .menu-btn:checked ~ .menu {
+max-height: 240px;
+}
+
+.nav .menu-btn:checked {
+box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon {
+background: transparent;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:before {
+transform: rotate(-45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:after {
+transform: rotate(45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:before, .nav .menu-btn:checked ~ .menu-icon .navicon:after {
+top: 0;
+}
+
+@media (min-width: 590px) {
+.nav li {
+float: left;
+}
+
+.nav li a {
+padding: 20px 30px;
+}
+
+.nav .menu {
+clear: none;
+float: right;
+max-height: none;
+}
+
+.nav .menu-icon {
+display: none;
+}
+}
+
+[hidden] {
+display: none;
+}
+
+ul, li {
+list-style: none;
+}
+
+.menu-icon svg {
+stroke: #ccc;
+}
+
+a:before {
+content: "";
+position: absolute;
+width: 100%;
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #00a3a3;
+visibility: hidden;
+-webkit-transform: scaleX(0);
+transform: scaleX(0);
+-webkit-transition: all 0.3s ease-in-out 0s;
+transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover:before {
+visibility: visible;
+-webkit-transform: scaleX(1);
+transform: scaleX(1);
+}
+
+nav a:hover {
+color: #000 !important;
+}
+
+a {
+position: relative;
+color: #000 !important;
+}
+
+@media screen and (max-width: 590px) {
+a:hover:before {
+visibility: hidden;
+}
+}
+
+.margin {
+padding-top: 0.1px !important;
 }

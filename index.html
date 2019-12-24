@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#383838"/>
+<meta name="theme-color" content="#353535"/>
 <title>Color Picker</title>
 <!-- FAVICON -->	
 <link rel="shortcut icon" href="https://igorkowalczyk.github.io/lib/favicon/favicon.jpg">
@@ -16,9 +16,14 @@
 <!-- BODY -->
 <body ondragstart="return false" ondrag="return false">
 <script tyle="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
-<div class="fixed">
-<h1>Color <span class="tel">picker</span></h1>
-</div>
+<nav class="nav" role="navigation">
+<a href="/"><span class="logo">Color Picker</span></a>
+<input class="menu-btn" type="checkbox" id="menu-btn" />
+<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+<ul class="menu">
+<li><a href="#set-colors">Set Colors</a></li>
+</ul>
+</nav>
 <template id="template">
 <div id="" class="box" onclick="copyColor(this.id)">
 <p data-default></p>
@@ -53,9 +58,9 @@
 <p data-hsl="" hidden="">hsl(347, 73%, 11%)</p>
 </div>
 </div>
-<div id="align-center">
+<div class="margin" id="set-colors">
 <div id="inputContainer">
-<textarea id="userInput"></textarea>
+<textarea id="userInput" spellcheck="false"></textarea>
 <button type="button" onclick="submit()">Submit</button>
 <p class="p">Note: Write every color in a new line.</p></div></div>
 </main>
