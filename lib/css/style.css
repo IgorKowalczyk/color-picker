@@ -363,6 +363,7 @@ width: 100%;
 top: 0;
 transition: 500ms all !important;
 z-index: 9999;
+user-select: none;
 }
 
 .nav:not(.nav-scroled):hover, .nav.nav-scrolled {
