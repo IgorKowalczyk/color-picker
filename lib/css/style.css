@@ -1,5 +1,47 @@
 /* (c) IGOR KOWALCZYK. All rights reserved. */
 
+:root {
+--switch-slider: #888;
+--color-888: #888;
+--background: #fff;
+--text: #000;
+--ui: #fff;
+--ui2: #000;
+--border: #21222c;
+--aqua: #00a3a3;
+--footer: #000;
+--button: #f4f4f4;
+--preloader: #fff;
+--spinner: #00a3a3;
+--spinner-border: #f3f3f3;
+--link: #000;
+--00a3a3: #00a3a3;
+--333: #333;
+--f4f4f4: #f4f4f4;
+--white: #fff;
+}
+
+[data-theme="dark"] {
+--switch-slider: #fff;
+--color-888: #888;
+--background: #222;
+--text: #fff;
+--ui: #222;
+--ui2: #fff;
+--border: #fff;
+--aqua: #fff;
+--footer: #fff;
+--button: #4a4a4a;
+--preloader: #222;
+--spinner: #888;
+--spinner-border: #333;
+--link: #fff;
+--00a3a3: #fff;
+--333: #fff;
+--f4f4f4: #4a4a4a;
+--white: #222;
+}
+
 @font-face {
 font-family: 'Roboto-Thin';
 src: url(https://igorkowalczyk.github.io/color-picker/lib/fonts/roboto/Roboto-Thin.otf);
@@ -9,9 +51,10 @@ body {
 margin: 0;
 -webkit-animation: fadeIn 1s ease-in;
 animation: fadeIn 1s ease-in;
-background: #fff;
+background: var(--background);
 font-family: 'Roboto-Thin';
 overflow-x: hidden;
+position: relative;
 }
 
 html {
@@ -31,6 +74,7 @@ opacity: 1;
 outline: none;
 scrollbar-color: #353535 transparent;
 scrollbar-width: thin;
+transition: 500ms background, 500ms background-color, 500ms color;
 }
 
 h1 {
@@ -57,18 +101,25 @@ margin: 50px 10%;
 }
 
 footer {
-margin-top: 50px;
-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+margin-top: 60px;
+color: var(--footer);
 user-select: none;
+text-align: center;
+}
+
+.theme {
+margin-bottom: 50px;
 }
 
 .sticky-footer {
 position: fixed;
 left: 0;
+box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
 bottom: 0;
 right: 0;
 padding: 0 50px 5px 50px;
-background: #fff;
+transition: 500ms all;
+background: var(--background);
 }
 
 [hidden] {
@@ -76,7 +127,7 @@ display: none !important;
 }
 
 label {
-color: #000;
+color: var(--text);
 }
 
 input[type="radio"] {
@@ -95,7 +146,7 @@ top: 4px;
 }
 
 input[type="radio"]:checked {
-border: 8px solid #00a3a3;
+border: 8px solid var(--aqua);
 }
 
 #colorContainer {
@@ -138,10 +189,10 @@ margin-top: 50px;
 }
 
 #userInput, button {
-color: #000;
-background-color: #fff;
+color: var(--ui2);
+background-color: var(--ui);
 font-family: 'Roboto-Thin';
-border: solid 1px hsl(235, 14%, 15%);
+border: solid 1px var(--border);
 }
 
 button {
@@ -152,7 +203,7 @@ transition: 500ms all;
 }
 
 button:hover {
-background: #f4f4f4;
+background: var(--button);
 }
 
 .pulse {
@@ -190,12 +241,12 @@ grid-template-columns: repeat(5, 0.2fr);
 
 .p {
 user-select: none;
-color: #fff;
+color: var(--text);
 }
 
 textarea {
 resize: vertical;
-transition: 0ms !important;
+transition: 500ms background-color, 500ms color;
 }
 
 ::-webkit-resizer {
@@ -225,11 +276,11 @@ background-clip: padding-box;
 .preloader {
 height: 100%;
 width: 100%;
-background: #fff;
+background: var(--preloader);
 position: fixed;
 left: 0;
 top: 0;
-z-index: 99999;
+z-index: 10000;
 perspective: 1600px;
 perspective-origin: 20% 50%;
 transition: 0.5s all;
@@ -239,8 +290,8 @@ opacity: 1;
 .spinner {
 width: 80px;
 height: 80px;
-border: 2px solid #f3f3f3;
-border-top: 3px solid #00a3a3;
+border: 2px solid var(--spinner-border);
+border-top: 3px solid var(--spinner);
 border-radius: 100%;
 position: absolute;
 top: 0;
@@ -291,13 +342,12 @@ color: #fff;
 text-shadow: none;
 }
 
-
 .nav {
-background-color: #fff;
+background-color: var(--white);
 position: fixed;
 width: 100%;
 top: 0;
-transition: 500ms all;
+transition: 500ms all !important;
 z-index: 9999;
 }
 
@@ -310,7 +360,7 @@ margin: 0;
 padding: 0;
 list-style: none;
 overflow: hidden;
-background-color: #fff;
+background-color: var(--white);
 }
 
 .nav li a {
@@ -318,11 +368,11 @@ display: block;
 font-size: 20px;
 padding: 20px 20px;
 text-decoration: none;
-transition: 500ms all;
+color: var(--link) !important;
 }
 
 .nav li a:hover, .nav .menu-btn:hover {
-background-color: #f4f4f4;
+background-color: var(--f4f4f4);
 }
 
 .nav .logo {
@@ -337,7 +387,7 @@ text-decoration: none;
 .nav .menu {
 clear: both;
 max-height: 0;
-transition: max-height .2s ease-in-out;
+transition: 500ms background-color, 500ms background, 200ms max-height, 1s color;
 }
 
 .nav .menu-icon {
@@ -350,7 +400,7 @@ user-select: none;
 }
 
 .nav .menu-icon .navicon {
-background: #333;
+background-color: var(--333);
 display: block;
 height: 2px;
 position: relative;
@@ -359,7 +409,7 @@ width: 18px;
 }
 
 .nav .menu-icon .navicon:before, .nav .menu-icon .navicon:after {
-background: #333;
+background-color: var(--333);
 content: '';
 display: block;
 height: 100%;
@@ -389,7 +439,7 @@ box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
 }
 
 .nav .menu-btn:checked ~ .menu-icon .navicon {
-background: transparent;
+background-color: transparent;
 }
 
 .nav .menu-btn:checked ~ .menu-icon .navicon:before {
@@ -424,12 +474,40 @@ display: none;
 }
 }
 
+[hidden] {
+display: none;
+}
+
+.logo {
+transition: 500ms all;
+}
+
 ul, li {
 list-style: none;
 }
 
 .menu-icon svg {
 stroke: #ccc;
+}
+
+a:hover {
+color: #00a3a3;
+}
+
+a {
+position: relative;
+color: var(--link) !important;
+}
+
+main a {
+color: var(--link) !important;
+transition: 500ms;
+}
+
+header h1:hover, h3 a:hover, main a:hover, main a:hover svg {
+color: var(--00a3a3) !important;
+fill: var(--00a3a3);
+transition: 500ms;
 }
 
 a:before {
@@ -439,7 +517,7 @@ width: 100%;
 height: 2px;
 bottom: 0;
 left: 0;
-background-color: #00a3a3;
+background-color: var(--00a3a3);
 visibility: hidden;
 -webkit-transform: scaleX(0);
 transform: scaleX(0);
@@ -454,12 +532,7 @@ transform: scaleX(1);
 }
 
 nav a:hover {
-color: #000 !important;
-}
-
-a {
-position: relative;
-color: #000 !important;
+color: var(--link) !important;
 }
 
 @media screen and (max-width: 590px) {
@@ -470,4 +543,70 @@ visibility: hidden;
 
 .margin {
 padding-top: 0.1px !important;
+}
+
+.theme-switch, .switch {
+display: inline-block;
+height: 34px;
+position: relative;
+width: 60px;
+}
+
+.theme-switch input, .switch input {
+display: none;
+}
+
+.theme-switch-container, .switch-container {
+position: sticky;
+top: 0;
+}
+
+.slider, .slider-switch {
+background-color: rgba(31, 31, 31, 0.8);
+bottom: 0;
+cursor: pointer;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+transition: .4s;
+}
+
+.slider-switch:before {
+background-color: var(--switch-slider);
+bottom: 4px;
+content: "";
+height: 26px;
+left: 4px;
+position: absolute;
+transition: .4s;
+width: 26px;
+}
+
+.slider:before {
+background-color: var(--color-888);
+bottom: 4px;
+content: "";
+height: 26px;
+left: 4px;
+position: absolute;
+transition: .4s;
+width: 26px;
+}
+
+input:checked + .slider, input:checked + .slider-switch {
+background-color: #888;
+}
+
+input:checked + .slider:before, input:checked + .slider-switch:before {
+transform: translateX(26px);
+background-color: #fff;
+}
+
+.slider.round, .slider-switch.round {
+border-radius: 34px;
+}
+
+.slider.round:before, .slider-switch.round:before {
+border-radius: 50%;
 }
