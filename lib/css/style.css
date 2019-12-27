@@ -159,12 +159,14 @@ display: none !important;
 
 label {
 color: var(--text);
+cursor: pointer;
 }
 
 input[type="radio"] {
 -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
+cursor: pointer;
 border-radius: 50%;
 --size: 24px;
 width: var(--size);
@@ -190,13 +192,14 @@ margin-top: 100px;
 #inputContainer {
 grid-auto-rows: minmax(0px, auto);
 display: grid;
-grid-gap: 40px;
 margin-top: 50px;
+margin: 50px;
 }
 
 .box {
 display: block;
 text-align: center;
+cursor: pointer;
 border-radius: 5px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
 overflow: hidden;
@@ -230,6 +233,7 @@ button {
 height: 50px;
 font-size: 20px;
 border-radius: 5px;
+margin-top: 20px;
 transition: 500ms all;
 }
 
@@ -273,6 +277,7 @@ grid-template-columns: repeat(5, 0.2fr);
 .p {
 user-select: none;
 color: var(--text);
+margin-top: 5px;
 }
 
 textarea {
@@ -401,7 +406,7 @@ overflow: hidden;
 background-color: var(--white);
 }
 
-.nav li a {
+.nav li .link {
 display: block;
 font-size: 20px;
 padding: 20px 20px;
@@ -409,7 +414,7 @@ text-decoration: none;
 color: var(--link) !important;
 }
 
-.nav li a:hover, .nav .menu-btn:hover {
+.nav li .link:hover, .nav .menu-btn:hover {
 background-color: var(--f4f4f4);
 }
 
@@ -497,7 +502,7 @@ top: 0;
 float: left;
 }
 
-.nav li a {
+.nav li .link {
 padding: 20px 30px;
 }
 
@@ -528,27 +533,27 @@ list-style: none;
 stroke: #ccc;
 }
 
-a:hover {
+.link:hover {
 color: #00a3a3;
 }
 
-a {
+.link {
 position: relative;
 color: var(--link) !important;
 }
 
-main a {
+main .link {
 color: var(--link) !important;
 transition: 500ms;
 }
 
-header h1:hover, h3 a:hover, main a:hover, main a:hover svg {
+header h1:hover, h3 .link:hover, main .link:hover, main .link:hover svg {
 color: var(--00a3a3) !important;
 fill: var(--00a3a3);
 transition: 500ms;
 }
 
-a:before {
+.link:before {
 content: "";
 position: absolute;
 width: 100%;
@@ -563,18 +568,18 @@ transform: scaleX(0);
 transition: all 0.3s ease-in-out 0s;
 }
 
-a:hover:before {
+.link:hover:before {
 visibility: visible;
 -webkit-transform: scaleX(1);
 transform: scaleX(1);
 }
 
-nav a:hover {
+nav .link:hover {
 color: var(--link) !important;
 }
 
 @media screen and (max-width: 590px) {
-a:hover:before {
+.link:hover:before {
 visibility: hidden;
 }
 }
@@ -647,4 +652,9 @@ border-radius: 34px;
 
 .slider.round:before, .slider-switch.round:before {
 border-radius: 50%;
+}
+
+a button {
+width: 100%;
+cursor: pointer;
 }
