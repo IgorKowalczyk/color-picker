@@ -283,6 +283,7 @@ margin-top: 5px;
 textarea {
 resize: vertical;
 transition: 500ms background-color, 500ms color;
+padding: 10px;
 }
 
 ::-webkit-resizer {
