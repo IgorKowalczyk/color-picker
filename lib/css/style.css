@@ -82,7 +82,6 @@ body {
 margin: 0;
 -webkit-animation: fade 500ms ease-in;
 animation: fade 500ms ease-in;
-transition: opacity 500ms;
 background: var(--background);
 font-family: 'Roboto-Thin';
 overflow-x: hidden;
