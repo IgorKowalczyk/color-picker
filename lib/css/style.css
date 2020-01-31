@@ -574,8 +574,8 @@ color: var(--link) !important;
 }
 
 @media screen and (max-width: 590px) {
-.link:hover:before {
-visibility: hidden;
+.link:hover {
+background-size: 0%;
 }
 }
 
