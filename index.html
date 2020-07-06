@@ -19,55 +19,74 @@ ga('create', 'UA-153609882-1', 'auto');
 ga('send', 'pageview');
 </script> 
 </head>
-<body>
+<body ondragstart="return false" ondrag="return false">
 <script type="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
 <noscript><div class="no-js">To view the page please enable javascript in your browser.</div></noscript>
-<div class="color-picker-panel">
-  <div class="panel-row">
-  <div class="swatches default-swatches"></div>
-   <button class="button eyedropper">Get Color</button>
-  </div>
-  <div class="panel-row">
-    <div class="spectrum-map">
-      <button id="spectrum-cursor" class="color-cursor"></button>
-      <canvas id="spectrum-canvas"></canvas>
-    </div>
-    <div class="hue-map">
-      <button id="hue-cursor" class="color-cursor"></button>
-      <canvas id="hue-canvas"></canvas>
-    </div>
-  </div>
-  <div class="panel-row">
-    <div id="rgb-fields" class="field-group value-fields rgb-fields active">
-      <div class="field-group">
-        <label for="" class="field-label">R:</label>
-        <input type="number" max="255" min="0" id="red" class="field-input rgb-input"/>
-      </div>
-      <div class="field-group">
-        <label for="" class="field-label">G:</label>
-        <input type="number" max="255" min="0" id="green" class="field-input rgb-input"/>
-      </div>
-      <div class="field-group">
-        <label for="" class="field-label">B:</label>
-        <input type="number" max="255" min="0" id="blue" class="field-input rgb-input"/>
-      </div>
-    </div>
-    <div id="hex-field" class="field-group value-fields hex-field">
-      <label for="" class="field-label">Hex:</label>
-      <input type="text" id="hex" class="field-input"/>
-    </div>
-    <button id="mode-toggle" class="button mode-toggle">Mode</button>
-  </div>
-  <div class="panel-row">
-    <h2 class="panel-header">User Colors</h2>
-    <div id="user-swatches" class="swatches custom-swatches">
-    </div>
-    <button id="add-swatch" class="button add-swatch">
-      <span id="color-indicator" class="color-indicator"></span><span>Add to Swatches</span>
-    </button>
-  </div>
+<nav class="nav" role="navigation">
+<span class="logo"><a class="link link-fade" href="/color-picker/">Color Picker</a></span>
+<input class="menu-btn" type="checkbox" id="menu-btn" />
+<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+<ul class="menu">
+<li><a class="link" href="#set-colors">Set Colors</a></li>
+</ul>
+</nav>
+<div class="margin" id="set-colors">
+<div id="inputContainer">
+<textarea id="userInput" spellcheck="false"></textarea>
+<a href="#color">
+<button type="button" onclick="submit()">Submit</button></a>
+<p class="p">Note: Write every color in a new line.</p></div></div>
+<template id="template">
+<div id="" class="box" onclick="copyColor(this.id)">
+<p data-default></p>
+<p data-hex data-case hidden></p>
+<p data-rgb hidden></p>
+<p data-hsl hidden></p>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.3.0/tinycolor.min.js"></script>
+</template><main>
+<div class="margin" id="color">
+<div id="colorContainer">
+<div id="box0" class="box" onclick="copyColor(this.id)" style="background-color: rgb(70, 10, 24);">
+<p data-default="">#460a18</p>
+<p data-hex="" data-case="" hidden="">#460a18</p>
+<p data-rgb="" hidden="">rgb(70, 10, 24)</p>
+<p data-hsl="" hidden="">hsl(346, 75%, 16%)</p>
+</div>
+<div id="box1" class="box" onclick="copyColor(this.id)" style="background-color: rgb(70, 10, 24);">
+<p data-default="">rgb(70,10,24)</p>
+<p data-hex="" data-case="" hidden="">#460a18</p>
+<p data-rgb="" hidden="">rgb(70,10,24)</p>
+<p data-hsl="" hidden="">hsl(346, 75%, 15%)</p>
+</div>
+<div id="box2" class="box" onclick="copyColor(this.id)" style="background-color: rgb(53, 8, 18);">
+<p data-default="">#350812</p>
+<p data-hex="" data-case="" hidden="">#350812</p>
+<p data-rgb="" hidden="">rgb(53, 8, 18)</p>
+<p data-hsl="" hidden="">hsl(347, 74%, 12%)</p>
+</div>
+<div id="box3" class="box" onclick="copyColor(this.id)" style="background-color: rgb(53, 8, 18);">
+<p data-default="">rgb(53,8,18)</p>
+<p data-hex="" data-case="" hidden="">#350812</p>
+<p data-rgb="" hidden="">rgb(53,8,18)</p>
+<p data-hsl="" hidden="">hsl(347, 73%, 11%)</p>
+</div>
+</div>
+</main>
+<footer class="theme">
+<li><div class="theme-switch-container">
+<label class="theme-switch" for="checkbox">
+<input type="checkbox" id="checkbox"/>
+<div class="slider round"></div>
+</label>
+</div><div class="option-description">Light/Dark Mode</div></li>
+<p>(c) <noscript>2019</noscript><span class="date"></span> IGOR KOWALCZYK.</p><p>This site uses cookies.</p>
+</footer>
+<footer class="footer sticky-footer">
+<label for="default"><input type="radio" name="format" id="default" value="default">DEF</label>
+<label for="hex"><input type="radio" name="format" id="hex" value="hex">HEX</label>
+<label for="rgb"><input type="radio" name="format" id="rgb" value="rgb">RGB</label>
+<label for="hsl"><input type="radio" name="format" id="hsl" value="hsl">HSL</label>
+</footer>
 <script src="/color-picker/lib/js/index.min.js"></script>
 </body>
 </html>
