@@ -65,6 +65,7 @@ src: url(https://igorkowalczyk.github.io/lib/fonts/roboto-thin.otf);
 scrollbar-color: #353535 transparent;
 scrollbar-width: thin;
 transition: width 0.5s linear, color 0.5s linear 0.5s, background-color 0.5s linear, background 0.5s linear, opacity 0.5s;
+scroll-behavior: smooth;
 }
 
 body {
@@ -72,7 +73,18 @@ margin: 0;
 padding: 0;
 background: var(--background);
 font-family: "Roboto-Thin";
-scroll-behavior: smooth;
+-webkit-animation: fade 500ms ease-in;
+animation: fade 500ms ease-in;
+}
+
+
+@keyframes fade {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
 }
 
 main {
