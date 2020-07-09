@@ -148,7 +148,11 @@ margin: 0;
 visibility: hidden;
 opacity: 0;
 pointer-events: none;
-transition: 500ms, 0ms margin !important;
+transition: 500ms;
+margin: 0;
+}
+
+.info-hide-margin {
 margin: 0;
 }
 
