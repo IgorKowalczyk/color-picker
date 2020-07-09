@@ -125,11 +125,12 @@ vertical-align: middle;
 padding-left: 5px;
 }
 
-.p button {
+.p button, .p button:hover {
 float: right;
 border: none;
 background-color: transparent;
 cursor: pointer;
+padding: 0;
 }
 
 .info-hide {
