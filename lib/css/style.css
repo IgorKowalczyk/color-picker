@@ -148,8 +148,6 @@ margin: 0;
 visibility: hidden;
 opacity: 0;
 pointer-events: none;
-height: 0px;
-/* max-height: 0; */
 transition: 500ms all !important;
 margin: 0;
 }
