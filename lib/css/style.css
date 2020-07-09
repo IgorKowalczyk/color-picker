@@ -148,7 +148,7 @@ margin: 0;
 visibility: hidden;
 opacity: 0;
 pointer-events: none;
-transition: 500ms all !important;
+transition: 500ms, 0ms margin !important;
 margin: 0;
 }
 
