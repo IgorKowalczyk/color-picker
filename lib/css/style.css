@@ -58,7 +58,7 @@
 
 @font-face {
 font-family: Roboto-Thin;
-src: url(https://igorkowalczyk.github.io/lib/fonts/roboto-thin.otf);
+src: url(../lib/fonts/roboto-thin.otf);
 }
 
 * {
@@ -93,6 +93,14 @@ margin: 50px 10%;
 margin-top: 50px;
 display: grid;
 grid-gap: 40px;
+}
+
+.main-1 {
+margin-bottom: 0;
+}
+
+.main-2 {
+margin-top: 0;
 }
 
 footer {
@@ -136,10 +144,13 @@ padding: 0;
 }
 
 .info-hide {
-/* max-height: 0; */
 visibility: hidden;
 opacity: 0;
 pointer-events: none;
+height: 0px;
+/* max-height: 0; */
+transition: 500ms all !important;
+margin: 0;
 }
 
 :target::before {

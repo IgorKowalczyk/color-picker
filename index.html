@@ -16,7 +16,7 @@
 <meta name="msapplication-TileColor" content="#fff">
 <meta name="msapplication-TileImage" content="https://igorkowalczyk.github.io/lib/favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="https://igorkowalczyk.github.io/lib/favicon/browserconfig.xml">
-<link rel="stylesheet" href="/color-picker/lib/css/style.min.css">
+<link rel="stylesheet" href="./lib/css/style.min.css">
 <script type="text/javascript">
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -31,14 +31,14 @@ ga('send', 'pageview');
 <script type="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
 <noscript><div class="no-js">To view the page please enable javascript in your browser.</div></noscript>
 <nav class="nav" role="navigation">
-<span class="logo"><a class="link link-fade" href="/color-picker/">Color Picker</a></span>
+<span class="logo"><a class="link link-fade" href="./">Color Picker</a></span>
 <input class="menu-btn" type="checkbox" id="menu-btn" />
 <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 <ul class="menu">
 <li><a class="link" href="#main">Set Colors</a></li>
 </ul>
 </nav>
-<main id="main">
+<main id="main" class="main-1">
 <template id="template">
 <tr>
 <td class="def" data-tooltip=""></td>
@@ -63,7 +63,7 @@ ga('send', 'pageview');
 </main>
 <div class="p" id="info"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg><span>Note: Write every color in a new line.<button id="close">
 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg></button></span></div>
-<main>
+<main class="main-2">
 <button id="button">Submit</button>
 <table id="table" data-toggle="">
 <tr>
@@ -86,6 +86,6 @@ ga('send', 'pageview');
 </div><div class="option-description">Light/Dark Mode</div></li>
 <p>(c) <noscript>2019</noscript><span class="date"></span> IGOR KOWALCZYK.</p><p>This site uses cookies.</p>
 </footer>
-<script src="/color-picker/lib/js/index.min.js"></script>
+<script src="./lib/js/index.min.js"></script>
 </body>
 </html>
