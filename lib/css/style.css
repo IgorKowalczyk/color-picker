@@ -66,6 +66,7 @@ scrollbar-color: #353535 transparent;
 scrollbar-width: thin;
 transition: width 0.5s linear, color 0.5s linear 0.5s, background-color 0.5s linear, background 0.5s linear, opacity 0.5s;
 scroll-behavior: smooth;
+outline: none;
 }
 
 body {
@@ -134,7 +135,7 @@ padding: 0;
 }
 
 .info-hide {
-max-height: 0;
+/* max-height: 0; */
 visibility: hidden;
 opacity: 0;
 pointer-events: none;
