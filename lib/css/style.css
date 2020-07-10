@@ -64,7 +64,6 @@ src: url(/lib/fonts/roboto-thin.otf);
 * {
 scrollbar-color: #353535 transparent;
 scrollbar-width: thin;
-transition: width 0.5s linear, color 0.5s linear 0.5s, background-color 0.5s linear, background 0.5s linear, opacity 0.5s;
 scroll-behavior: smooth;
 outline: none;
 }
@@ -76,6 +75,7 @@ background: var(--background);
 font-family: "Roboto-Thin";
 -webkit-animation: fade 500ms ease-in;
 animation: fade 500ms ease-in;
+transition: 500ms all;
 }
 
 
@@ -106,6 +106,7 @@ margin-top: 0;
 footer {
 text-align: center;
 color: var(--text);
+transition: 500ms all;
 }
 
 [data-hide] {
@@ -173,6 +174,7 @@ text-align: center;
 padding: 10px;
 font-weight: 400;
 cursor: help;
+transition: 500ms all;
 }
 
 td {
@@ -180,11 +182,13 @@ padding: 10px;
 border: 1px solid var(--border-table);
 cursor: pointer;
 text-align: center;
+transition: 500ms all;
 }
 
 .def {
 border: none;
 cursor: help;
+transition: 500ms all;
 }
 
 td:hover {
@@ -213,7 +217,7 @@ border-left: solid 3px var(--border-table);
 
 textarea {
 resize: vertical;
-transition: 500ms background-color, 500ms color;
+transition: 500ms all;
 padding: 10px;
 max-height: 800px;
 min-height: 100px;
@@ -235,7 +239,7 @@ border: none;
 background-color: var(--button);
 color: var(--text);
 cursor: pointer;
-transition: 500ms;
+transition: 500ms all;
 font-size: 16px;
 font-family: "Roboto-Thin";
 }
@@ -382,7 +386,7 @@ top: 0;
 z-index: 100000;
 perspective: 1600px;
 perspective-origin: 20% 50%;
-transition: 0.5s all;
+transition: 500ms all;
 opacity: 1;
 }
 
@@ -605,7 +609,7 @@ background-image: linear-gradient(var(--00a3a3), var(--00a3a3));
 background-position: 50% 100%;
 background-repeat: no-repeat;
 background-size: 0% 2px;
-transition: inherit, background-size 300ms;
+transition: 500ms, background-size 300ms;
 color: var(--text) !important;
 }
 
@@ -616,13 +620,13 @@ color: var(--link) !important;
 
 main .link {
 color: var(--link) !important;
-transition: 500ms;
+transition: 500ms all;
 }
 
 header h1:hover, h3 .link:hover, main .link:hover, main .link:hover svg {
 color: var(--00a3a3) !important;
 fill: var(--00a3a3);
-transition: 500ms;
+transition: 500ms all;
 }
 
 nav .link:hover {
@@ -638,7 +642,6 @@ background-size: 0%;
 .margin {
 padding-top: 0.1px !important;
 }
-
 
 .switch, .theme-switch {
 display: inline-block;
