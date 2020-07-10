@@ -181,6 +181,7 @@ td {
 padding: 10px;
 border: 1px solid var(--border-table);
 cursor: pointer;
+transition: 500ms border;
 text-align: center;
 }
 
