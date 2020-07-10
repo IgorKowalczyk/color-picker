@@ -182,13 +182,15 @@ padding: 10px;
 border: 1px solid var(--border-table);
 cursor: pointer;
 text-align: center;
+}
+
+tr {
 transition: 500ms all;
 }
 
 .def {
 border: none;
 cursor: help;
-transition: 500ms all;
 }
 
 td:hover {
