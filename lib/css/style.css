@@ -149,7 +149,7 @@ visibility: hidden;
 opacity: 0;
 pointer-events: none;
 transition: 500ms;
-margin: 0;
+margin: 0px 10%;
 }
 
 .info-hide-margin {
