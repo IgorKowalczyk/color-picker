@@ -1,0 +1,38 @@
+# Main page title
+title: "Color Picker"
+
+# Your name
+name: "Igor Kowalczyk"
+
+# Contact E-Mail (Public!)
+email: "xxmajonezxx@gmail.com"
+
+# Description
+description: "A tool to help with the colors on the web."
+
+# Base url (Not link! Only dir.
+baseurl: "/color-picker"
+
+# Github username (no link) - if you don't have - leave blank
+github_username:  "igorkowalczyk"
+
+# First Launch of the site (displays in footer)
+first-launch: "2019"
+
+# Timezone
+timezone: "Europe/Warsaw"
+
+# Markdown and Default theme
+markdown: kramdown
+theme: minima
+
+# Exclude files
+exclude:
+ - Gemfile
+ - Gemfile.lock
+
+# Tracking id - if you don't have - leave blank
+tracking_id: "UA-153609882-1"
+
+# Verification ID - if you don't have - leave blank
+verification: "-wuCsk4qLolXEPSUTGX7YBxywcyNNf5HS2ClzgEWxNY"

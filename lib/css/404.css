@@ -1,3 +1,6 @@
+---
+layout: null
+---
 /* (c) IGOR KOWALCZYK. All rights reserved. */
 
 :root {
@@ -34,7 +37,8 @@
 
 @font-face {
 font-family: Roboto-Thin;
-src: url(/lib/fonts/roboto-thin.otf);
+font-style: normal;
+src: url({{ site.baseurl }}/lib/fonts/roboto-thin.otf);
 }
 
 * {
@@ -84,7 +88,7 @@ display: flex;
 flex-direction: column;
 -webkit-animation: fade 0.5s ease-in;
 animation: fade 0.5s ease-in;
-transition: 500ms background-color;
+transition: 500ms all;
 }
 
 @keyframes fade {
