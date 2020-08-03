@@ -17,6 +17,7 @@
 <meta name="msapplication-TileImage" content="{{ site.url }}{{ site.baseurl }}/lib/favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="{{ site.url }}{{ site.baseurl }}/lib/favicon/browserconfig.xml">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
+{% if page.redirect %}<meta http-equiv="refresh" content="0; url='{{ page.redirect }}'">{% endif %}
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %} {{ site.title }}{% endif %}">
