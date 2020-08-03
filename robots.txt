@@ -1,6 +1,13 @@
-User-agent: *
-Allow: .js
-Allow: .css
-Allow: /lib/
+---
+layout: "null"
+---
+{% if site.block %}
+User-agent: GoogleBot
+Disallow: *
+Allow:
+{% else %}
+User-agent: GoogleBot
 Disallow:
-Sitemap: https://igorkowalczyk.github.io/color-picker/sitemap.xml
+Allow: *
+{% endif %}
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
