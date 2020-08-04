@@ -13,6 +13,12 @@ description: "A tool to help with the colors on the web."
 # Base url (Not link! Only dir.
 baseurl: "/color-picker"
 
+# Support to mobile browsers (It’s unknown what range of browsers support this meta tags) [Better to set the value to "false"!]
+mobile: "false"
+
+# Twitter username (no link) - if you don't have - leave blank
+twitter: "@majonezexe"
+
 # Github username (no link) - if you don't have - leave blank
 github_username:  "igorkowalczyk"
 
