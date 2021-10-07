@@ -16,10 +16,10 @@ baseurl: "/color-picker"
 # Support to mobile browsers (It’s unknown what range of browsers support this meta tags) [Better to set the value to "false"!]
 mobile: "false"
 
-# Twitter username (no link) - if you don't have - leave blank
+# Twitter username (no link)
 twitter: "@majonezexe"
 
-# Github username (no link) - if you don't have - leave blank
+# Github username (no link)
 github_username:  "igorkowalczyk"
 
 # First Launch of the site (displays in footer)
@@ -40,8 +40,11 @@ exclude:
  - Gemfile
  - Gemfile.lock
 
-# Tracking id - if you don't have - leave blank
+# Google Tracking ID
 tracking_id: "UA-174454816-3"
 
-# Verification ID - if you don't have - leave blank
+# Google Verification ID 
 verification: "-wuCsk4qLolXEPSUTGX7YBxywcyNNf5HS2ClzgEWxNY"
+
+# Arc.io key
+arc: "S9mepABR"
