@@ -4,7 +4,7 @@ JavaScript based website to pick HEX or RGB colors
 [![Jekyll](https://github.com/igorkowalczyk/color-picker/workflows/Jekyll/badge.svg)](https://igorkowalczyk.github.io/color-picker)
 [![GitHub License](https://img.shields.io/github/license/igorkowalczyk/color-picker?color=%2334D058&logo=github&logoColor=959DA5&labelColor=24292E)](https://igorkowalczyk.github.io/color-picker/license.txt)
 [![Version](https://img.shields.io/github/v/release/igorkowalczyk/color-picker?color=%2334D058&logo=github&logoColor=959DA5&labelColor=24292E)](https://github.com/igorkowalczyk/color-picker/releases)
-[![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&logoColor=7289da&labelColor=24292E)](https://redirect-majoexe.herokuapp.com/majo-v12)
+[![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=discord&logoColor=7289da&labelColor=24292E)](https://igorkowalczyk.github.io/r/discord-server)
 
 # Issues
 If you have any issues with the page please create [new issue here](https://github.com/igorkowalczyk/color-picker/issues)
